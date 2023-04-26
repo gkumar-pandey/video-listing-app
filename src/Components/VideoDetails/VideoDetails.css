@@ -38,6 +38,7 @@
   border: none;
   font-size: 1rem;
   background-color: blueviolet;
+  cursor: pointer;
 }
 
 .video-details-btn button:last-child {

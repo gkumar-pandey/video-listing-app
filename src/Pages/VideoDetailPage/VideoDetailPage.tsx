@@ -1,8 +1,7 @@
-import React from "react";
 import { useParams } from "react-router-dom";
-import { useVideos } from "../../Context/Video-context/Video-Context";
-import VideoDetails from "../../Components/VideoDetails/VideoDetails";
-import Container from "../../Components/Container/Container";
+
+import { VideoDetails, Container } from "../../Components";
+import { useVideos } from "../../Context";
 
 const VideoDetailPage = () => {
   const { videoId } = useParams();

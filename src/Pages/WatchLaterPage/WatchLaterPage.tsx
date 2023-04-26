@@ -1,10 +1,5 @@
-import React from "react";
-import { useWatchLaterVideos } from "../../Context/Watchlater-context/WatchLater-context";
-import Container from "../../Components/Container/Container";
-import GridContainer from "../../Components/GridContainer/GridContainer";
-import VideoCard from "../../Components/VideoCard/VideoCard";
-import Title from "../../Components/Title/Title";
-import VideoTiles from "../../Components/VideoTiles/VideoTiles";
+import { Container, Title, VideoTiles } from "../../Components";
+import { useWatchLaterVideos } from "../../Context";
 
 const WatchLaterPage = () => {
   const { watchLaterVideos } = useWatchLaterVideos();

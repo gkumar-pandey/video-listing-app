@@ -1,9 +1,14 @@
-import React from "react";
+import { useWatchLaterVideos, useLikedVideos } from "../../Context";
 import "./VideoDetails.css";
 
 const VideoDetails = (props: any) => {
-  const { title, url, duration, description } = props;
+  const { id, title, url, duration, description } = props;
   const ytVideoId = url?.split("=");
+  const { likedVideos, addLikedVideos } = useLikedVideos();
+  const { watchLaterVideos, addToWatchLater } = useWatchLaterVideos();
+
+  const isLiked = likedVideos.find((video: any) => video.id === id);
+  const isWatchLater = watchLaterVideos.find((video: any) => video.id === id);
 
   return (
     <div>
@@ -28,8 +33,18 @@ const VideoDetails = (props: any) => {
           <p>Duration: {duration}</p>
         </div>
         <div className="video-details-btn">
-          <button>Liked</button>
-          <button>Add to watch Later</button>
+          {isLiked ? (
+            <button>Liked</button>
+          ) : (
+            <button onClick={() => addLikedVideos(props)}>Like</button>
+          )}
+          {isWatchLater ? (
+            <button>Added To Watch Later</button>
+          ) : (
+            <button onClick={() => addToWatchLater(props)}>
+              Add To Watch Later
+            </button>
+          )}
         </div>
       </div>
     </div>

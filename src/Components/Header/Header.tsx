@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Container from "../Container/Container";
+import { useLikedVideos, useWatchLaterVideos } from "../../Context";
 import "./Header.css";
-import { useLikedVideos } from "../../Context/LikedVideo-context/LikedVideo-context";
-import { useWatchLaterVideos } from "../../Context/Watchlater-context/WatchLater-context";
 
 const Header = () => {
   const { likedVideos } = useLikedVideos();

@@ -1,10 +1,10 @@
+import { Link, useLocation } from "react-router-dom";
+
+import { useWatchLaterVideos, useLikedVideos } from "../../Context";
 import "./vidoetiles.css";
-import { useWatchLaterVideos } from "../../Context/Watchlater-context/WatchLater-context";
-import { useLocation } from "react-router-dom";
-import { useLikedVideos } from "../../Context/LikedVideo-context/LikedVideo-context";
 
 const VideoTiles = (props: any) => {
-  const { id, title, url, duration, description, thumbnail } = props;
+  const { id, title, duration, description, thumbnail } = props;
   const { removeFromLikedVideos, addLikedVideos, likedVideos } =
     useLikedVideos();
   const { removeFromWatchLater, addToWatchLater, watchLaterVideos } =
@@ -20,7 +20,9 @@ const VideoTiles = (props: any) => {
     <div>
       <div className="video-tile-wrapper">
         <div className="img">
-          <img src={thumbnail} alt={title} />
+          <Link to={`/video/${id}`}>
+            <img src={thumbnail} alt={title} />
+          </Link>
         </div>
         <div className="video-tile-text">
           <h2>{title}</h2>

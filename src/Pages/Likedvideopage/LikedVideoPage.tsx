@@ -1,10 +1,5 @@
-import React from "react";
-import Container from "../../Components/Container/Container";
-import GridContainer from "../../Components/GridContainer/GridContainer";
-import { useLikedVideos } from "../../Context/LikedVideo-context/LikedVideo-context";
-import VideoCard from "../../Components/VideoCard/VideoCard";
-import Title from "../../Components/Title/Title";
-import VideoTiles from "../../Components/VideoTiles/VideoTiles";
+import { Title, Container, VideoTiles } from "../../Components";
+import { useLikedVideos } from "../../Context";
 
 const LikedVideoPage = () => {
   const { likedVideos } = useLikedVideos();

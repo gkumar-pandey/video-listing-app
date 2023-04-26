@@ -1,4 +1,4 @@
-import HeroComp from "../../Components/HeroComp/HeroComp";
+import { HeroComp } from "../../Components";
 
 const Homepage = () => {
   return (
