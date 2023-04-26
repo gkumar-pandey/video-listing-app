@@ -1,0 +1,12 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  place-items: center;
+  row-gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 6fr 6fr;
+  }
+}

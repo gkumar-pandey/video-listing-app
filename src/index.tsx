@@ -1,15 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { VideoProvider } from "./Context/Video-context/Video-Context";
+import { LikedVideosProvider } from "./Context/LikedVideo-context/LikedVideo-context";
+import { WatchLaterVideosProvider } from "./Context/Watchlater-context/WatchLater-context";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <VideoProvider>
+        <LikedVideosProvider>
+          <WatchLaterVideosProvider>
+            <App />
+          </WatchLaterVideosProvider>
+        </LikedVideosProvider>
+      </VideoProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -1,0 +1,25 @@
+.video-card {
+  border: 1px solid #333;
+  max-width: 300px;
+  margin: 0.5rem;
+  border-radius: 8px;
+}
+
+.video-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.video-card-text {
+  padding: 0.4rem;
+}
+
+.video-card-text p {
+  margin: 5px 0px;
+}
+
+.video-card-text button {
+  padding: 4px 8px;
+  margin: 0 0.4rem;
+  cursor: pointer;
+}
