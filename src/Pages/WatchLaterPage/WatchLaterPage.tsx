@@ -4,6 +4,7 @@ import Container from "../../Components/Container/Container";
 import GridContainer from "../../Components/GridContainer/GridContainer";
 import VideoCard from "../../Components/VideoCard/VideoCard";
 import Title from "../../Components/Title/Title";
+import VideoTiles from "../../Components/VideoTiles/VideoTiles";
 
 const WatchLaterPage = () => {
   const { watchLaterVideos } = useWatchLaterVideos();
@@ -11,11 +12,11 @@ const WatchLaterPage = () => {
     <div className="bg-color">
       <Container>
         <Title title="Watch Later Videos" />
-        <GridContainer>
+        <>
           {watchLaterVideos.map((video: object) => (
-            <VideoCard {...video} />
+            <VideoTiles {...video} />
           ))}
-        </GridContainer>
+        </>
       </Container>
     </div>
   );

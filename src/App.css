@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.bg-color {
+  background-color: #0c2233;
+  color: #fff;
+  min-height: 100vh;
+}

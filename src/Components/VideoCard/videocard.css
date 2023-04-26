@@ -1,8 +1,12 @@
 .video-card {
-  border: 1px solid #333;
+  border: 1px solid #666;
   max-width: 300px;
   margin: 0.5rem;
   border-radius: 8px;
+}
+
+.video-card .img-container {
+  padding: 5px;
 }
 
 .video-card img {
@@ -11,15 +15,24 @@
 }
 
 .video-card-text {
-  padding: 0.4rem;
+  padding: 0.5rem;
 }
 
-.video-card-text p {
-  margin: 5px 0px;
+.btn {
+  /* text-align: center; */
 }
 
-.video-card-text button {
-  padding: 4px 8px;
-  margin: 0 0.4rem;
+.btn div {
+  margin: 0.5rem 0;
+}
+
+.btn button {
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  margin: 0.5rem 0.5rem;
   cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color: #fff;
 }
