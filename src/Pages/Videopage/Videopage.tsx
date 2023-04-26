@@ -8,11 +8,19 @@ const Videopage = () => {
     <div className="bg-color">
       <Container>
         <Title title="All Videos" />
-        <GridContainer>
-          {videos.map((video: any) => (
-            <VideoCard key={video.id} {...video} />
-          ))}
-        </GridContainer>
+        {videos.length > 0 ? (
+          <div>
+            <GridContainer>
+              {videos.map((video: any) => (
+                <VideoCard key={video.id} {...video} />
+              ))}
+            </GridContainer>
+          </div>
+        ) : (
+          <div style={{ textAlign: "center" }}>
+            <h1>Loading...</h1>
+          </div>
+        )}
       </Container>
     </div>
   );

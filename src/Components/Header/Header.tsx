@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import Container from "../Container/Container";
 import { useLikedVideos, useWatchLaterVideos } from "../../Context";
 import "./Header.css";
+import Search from "../Search/Search";
 
 const Header = () => {
   const { likedVideos } = useLikedVideos();
@@ -17,6 +18,7 @@ const Header = () => {
           <div>
             <h2 className="logo">DevTube</h2>
           </div>
+          <Search />
           <nav>
             <NavLink to={"/"} style={activeLinkStyle} className="nav-link">
               Home
