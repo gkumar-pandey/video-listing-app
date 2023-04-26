@@ -1,6 +1,6 @@
 .header {
   padding: 1rem 0;
-  background-color: #eee;
+  background-color: #0c2233;
 }
 
 .header-wrapper {
@@ -11,6 +11,7 @@
 
 .logo {
   font-size: 1.8rem;
+  color: #fff;
 }
 
 .header-wrapper nav .nav-link {
@@ -18,4 +19,25 @@
   margin: 0 0.8rem;
   font-weight: 500;
   font-size: 1rem;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 600px) {
+  .header-wrapper {
+    flex-wrap: wrap;
+  }
+  .header-wrapper nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+  }
+  .header-wrapper nav .nav-link {
+    margin: 0;
+    display: flex;
+  }
 }
