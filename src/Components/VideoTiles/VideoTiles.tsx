@@ -31,7 +31,7 @@ const VideoTiles = (props: any) => {
             <span>{description}</span>
           </p>
           <p>Duration: {duration}</p>
-          <div>
+          <div className="btn">
             {location.pathname === "/likedvideos" ? (
               <button onClick={() => removeFromLikedVideos(id)}>Remove</button>
             ) : isAddedToLikeVideos ? (

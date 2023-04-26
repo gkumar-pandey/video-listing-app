@@ -5,6 +5,12 @@
   row-gap: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 6fr 6fr;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .grid-container {
     grid-template-columns: 12fr;

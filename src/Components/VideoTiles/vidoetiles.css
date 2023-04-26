@@ -49,6 +49,7 @@
   .video-tile-wrapper {
     max-height: fit-content;
     flex-direction: column;
+    margin: 0.5rem;
   }
 
   .img {
@@ -58,5 +59,16 @@
   .video-tile-wrapper img {
     width: 100%;
     height: auto;
+  }
+  .video-tile-text {
+    padding: 0;
+    /* border: 1px solid red; */
+    padding-bottom: 0.4rem;
+  }
+  .video-tile-text .btn button {
+    margin: 0;
+  }
+  .video-tile-text .btn button:last-child {
+    margin-left: 1rem;
   }
 }

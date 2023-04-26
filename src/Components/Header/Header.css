@@ -1,8 +1,6 @@
 .header {
   padding: 1rem 0;
   background-color: #0c2233;
-  position: fixed;
-  z-index: 100;
   width: 100%;
 }
 

@@ -36,3 +36,9 @@
   background-color: blueviolet;
   color: #fff;
 }
+
+@media screen and (max-width: 600px) {
+  .btn button {
+    padding: 8px 12px;
+  }
+}
