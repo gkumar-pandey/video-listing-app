@@ -18,8 +18,8 @@
   padding: 0.5rem;
 }
 
-.btn {
-  /* text-align: center; */
+.btn .link {
+  color: #fff;
 }
 
 .btn div {

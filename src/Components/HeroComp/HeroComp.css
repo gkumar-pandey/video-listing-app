@@ -40,3 +40,15 @@
   background-color: purple;
   color: #fff;
 }
+
+@media screen and (max-width: 600px) {
+  .welcome-text {
+    font-size: 3rem;
+    font-family: sans-serif;
+  }
+
+  .text {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+  }
+}

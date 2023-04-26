@@ -15,7 +15,7 @@ const Header = () => {
       <Container>
         <div className="header-wrapper">
           <div>
-            <h2 className="logo">Videos</h2>
+            <h2 className="logo">DevTube</h2>
           </div>
           <nav>
             <NavLink to={"/"} style={activeLinkStyle} className="nav-link">

@@ -1,21 +1,11 @@
 import React from "react";
+import "./title.css";
 interface titleProps {
   title: string;
 }
 
 const Title = ({ title }: titleProps) => {
-  return (
-    <div
-      style={{
-        fontSize: "1.8rem",
-        fontWeight: "bold",
-        textAlign: "center",
-        padding: "1rem 0rem"
-      }}
-    >
-      {title}
-    </div>
-  );
+  return <div className="title">{title}</div>;
 };
 
 export default Title;

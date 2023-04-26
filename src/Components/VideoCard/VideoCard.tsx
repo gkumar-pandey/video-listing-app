@@ -26,7 +26,9 @@ const VideoCard = (props: any) => {
           <p>{title}</p>
           <div className="btn">
             <div>
-              <Link to={`/video/${id}`}>watch here</Link>
+              <Link className="link" to={`/video/${id}`}>
+                watch here
+              </Link>
             </div>
             {isLiked ? (
               <button onClick={() => removeFromLikedVideos(id)}>Liked</button>

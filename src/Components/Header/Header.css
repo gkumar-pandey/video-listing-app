@@ -1,12 +1,16 @@
 .header {
   padding: 1rem 0;
   background-color: #0c2233;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 }
 
 .header-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 1rem;
 }
 
 .logo {
@@ -28,6 +32,8 @@
 @media screen and (max-width: 600px) {
   .header-wrapper {
     flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
   }
   .header-wrapper nav {
     display: flex;

@@ -1,0 +1,13 @@
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    padding-top: 7rem;
+  }
+}
