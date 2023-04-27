@@ -2,20 +2,27 @@ import { Title, VideoCard, GridContainer, Container } from "../../Components";
 import { useVideos } from "../../Context";
 
 const Videopage = () => {
-  const { videos } = useVideos();
+  const { videos, filteredVideos } = useVideos();
 
   return (
     <div className="bg-color">
       <Container>
         <Title title="All Videos" />
-        {videos.length > 0 ? (
+
+        {filteredVideos.length > 0 ? (
           <div>
             <GridContainer>
-              {videos.map((video: any) => (
+              {filteredVideos.map((video: any) => (
                 <VideoCard key={video.id} {...video} />
               ))}
             </GridContainer>
           </div>
+        ) : videos.length > 0 ? (
+          <GridContainer>
+            {videos.map((video: any) => (
+              <VideoCard key={video.id} {...video} />
+            ))}
+          </GridContainer>
         ) : (
           <div style={{ textAlign: "center" }}>
             <h1>Loading...</h1>

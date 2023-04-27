@@ -18,33 +18,35 @@ const Header = () => {
           <div>
             <h2 className="logo">DevTube</h2>
           </div>
-          <Search />
-          <nav>
-            <NavLink to={"/"} style={activeLinkStyle} className="nav-link">
-              Home
-            </NavLink>
-            <NavLink
-              to={"/videos"}
-              style={activeLinkStyle}
-              className="nav-link"
-            >
-              Videos
-            </NavLink>
-            <NavLink
-              to={"/likedvideos"}
-              style={activeLinkStyle}
-              className="nav-link"
-            >
-              Liked Videos({likedVideos.length}){" "}
-            </NavLink>
-            <NavLink
-              to={"/watchlater"}
-              style={activeLinkStyle}
-              className="nav-link"
-            >
-              Watch Later({watchLaterVideos.length})
-            </NavLink>
-          </nav>
+          <div className="nav-link-wrapper">
+            <Search />
+            <nav>
+              <NavLink to={"/"} style={activeLinkStyle} className="nav-link">
+                Home
+              </NavLink>
+              <NavLink
+                to={"/videos"}
+                style={activeLinkStyle}
+                className="nav-link"
+              >
+                Videos
+              </NavLink>
+              <NavLink
+                to={"/likedvideos"}
+                style={activeLinkStyle}
+                className="nav-link"
+              >
+                Liked Videos({likedVideos.length}){" "}
+              </NavLink>
+              <NavLink
+                to={"/watchlater"}
+                style={activeLinkStyle}
+                className="nav-link"
+              >
+                Watch Later({watchLaterVideos.length})
+              </NavLink>
+            </nav>
+          </div>
         </div>
       </Container>
     </div>

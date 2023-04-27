@@ -1,16 +1,17 @@
-import React from "react";
+import { useVideos } from "../../Context";
+import "./search.css";
 
 const Search = () => {
-  const searchStyle = {
-    padding: "8px 5px",
-    width: "300px",
-    border:'none',
-    borderRadius: "5px"
-  };
+  const { searchHandler } = useVideos();
   return (
-    <div>
-      <input type="text" style={searchStyle} placeholder="Search..." />
-    </div>
+    <>
+      <input
+        type="text"
+        onChange={(e) => searchHandler(e)}
+        className="search"
+        placeholder="Search..."
+      />
+    </>
   );
 };
 
