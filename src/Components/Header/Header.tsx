@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Container from "../Container/Container";
 import { useLikedVideos, useWatchLaterVideos } from "../../Context";
 import "./Header.css";
@@ -10,7 +10,7 @@ const Header = () => {
   const activeLinkStyle = ({ isActive }: any) => ({
     backgroundColor: isActive ? "purple" : ""
   });
-
+  const location = useLocation();
   return (
     <div className="header">
       <Container>
@@ -19,7 +19,7 @@ const Header = () => {
             <h2 className="logo">DevTube</h2>
           </div>
           <div className="nav-link-wrapper">
-            <Search />
+            {location.pathname === "/videos" && <Search />}
             <nav>
               <NavLink to={"/"} style={activeLinkStyle} className="nav-link">
                 Home
