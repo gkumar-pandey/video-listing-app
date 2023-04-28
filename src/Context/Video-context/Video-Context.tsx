@@ -41,7 +41,9 @@ export const VideoProvider = ({ children }: any) => {
   }, [searchInput]);
 
   return (
-    <videoContext.Provider value={{ videos, searchHandler, filteredVideos }}>
+    <videoContext.Provider
+      value={{ videos, searchHandler, searchInput, filteredVideos }}
+    >
       {children}
     </videoContext.Provider>
   );
